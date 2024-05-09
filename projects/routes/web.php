@@ -36,7 +36,7 @@ Route::get('/', function () {
 
     // query builder 
     // select or get data 
-    $users = DB::table('users')->get();
+    // $users = DB::table('users')->get();
     // $users = DB::table('users')->where('id', 4)->get();
     // dd($users);
 
@@ -50,7 +50,11 @@ Route::get('/', function () {
 
     // update 
     // $users = DB::table('users')->where('id', 6)->update(['email' => 'ksjdhdskj@gmail.com']);
-    dd($users);
+    // dd($users);
+
+    // delete 
+    // $users = DB::table('users')->where('id', 6)->delete();
+    // dd($users);
 });
 
 Route::get('/dashboard', function () {
