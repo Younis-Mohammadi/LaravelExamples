@@ -59,7 +59,11 @@ Route::get('/', function () {
 
     // elequent orm 
     // select or get 
-    $users = User::where('id', 2)->first();
+    // $users = User::where('id', 2)->first();
+    // dd($users);
+
+    // create or insert 
+    $users = User::create(['name' => 'kaber', 'email' => 'kabir@gmail.com', 'password' => 'password']);
     dd($users);
 });
 
