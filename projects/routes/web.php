@@ -59,7 +59,7 @@ Route::get('/', function () {
 
     // elequent orm 
     // select or get 
-    $users = User::where('id', 7)->first();
+    // $users = User::where('id', 7)->first();
     // dd($users);
 
     // create or insert 
@@ -77,6 +77,13 @@ Route::get('/', function () {
     // delete
     // $users = User::find(7);
     // $users->delete();
+    // dd($users);
+
+    $users = User::create([
+        'name'=>'Omid',
+        'email'=>'omid@gmail.com',
+        'password'=>bcrypt('12345'),
+    ]);
     dd($users);
 });
 
