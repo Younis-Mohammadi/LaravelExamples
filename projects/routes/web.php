@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +56,11 @@ Route::get('/', function () {
     // delete 
     // $users = DB::table('users')->where('id', 6)->delete();
     // dd($users);
+
+    // elequent orm 
+    // select or get 
+    $users = User::where('id', 2)->first();
+    dd($users);
 });
 
 Route::get('/dashboard', function () {
