@@ -59,7 +59,7 @@ Route::get('/', function () {
 
     // elequent orm 
     // select or get 
-    // $users = User::where('id', 2)->first();
+    $users = User::where('id', 7)->first();
     // dd($users);
 
     // create or insert 
@@ -67,10 +67,16 @@ Route::get('/', function () {
     // dd($users);
 
     // update 
-    $users = User::where('id', 8)->first();
-    $users->update([
-        'email'=>'my@gmail.com',
-    ]);
+    // $users = User::where('id', 8)->first();
+    // $users = User::find(7);
+    // $users->update([
+    //     'email'=>'my1@gmail.com',
+    // ]);
+    // dd($users);
+
+    // delete
+    // $users = User::find(7);
+    // $users->delete();
     dd($users);
 });
 
