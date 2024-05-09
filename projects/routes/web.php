@@ -33,6 +33,12 @@ Route::get('/', function () {
     // delete 
     // $users = DB::delete('delete from users where id=1');
     // dd($users);
+
+    // query builder 
+    // select or get data 
+    // $users = DB::table('users')->get();
+    $users = DB::table('users')->where('id', 4)->get();
+    dd($users);
 });
 
 Route::get('/dashboard', function () {
