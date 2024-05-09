@@ -63,7 +63,14 @@ Route::get('/', function () {
     // dd($users);
 
     // create or insert 
-    $users = User::create(['name' => 'kaber', 'email' => 'kabir@gmail.com', 'password' => 'password']);
+    // $users = User::create(['name' => 'kaber', 'email' => 'kabir@gmail.com', 'password' => 'password']);
+    // dd($users);
+
+    // update 
+    $users = User::where('id', 8)->first();
+    $users->update([
+        'email'=>'my@gmail.com',
+    ]);
     dd($users);
 });
 
