@@ -17,7 +17,13 @@ use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
     // return view('welcome');
+    // select 
     $users = DB::select('select * from users');
+    // $users = DB::select('select * from users where email=?',['mohammad@gmail.com']);
+    // dd($users);
+
+    // inser 
+    // $users = DB::insert('insert into users(name,email,password) values(?,?,?)',['Ahmad','ahmad2@gmail.com','123456789']);
     dd($users);
 });
 
