@@ -36,8 +36,20 @@ Route::get('/', function () {
 
     // query builder 
     // select or get data 
-    // $users = DB::table('users')->get();
-    $users = DB::table('users')->where('id', 4)->get();
+    $users = DB::table('users')->get();
+    // $users = DB::table('users')->where('id', 4)->get();
+    // dd($users);
+
+    // insert 
+    // $users = DB::table('users')->insert([
+    //     'name' => 'Amir',
+    //     'email' => 'amir@gmail.com',
+    //     'password' => 'password',
+    // ]);
+    // dd($users);
+
+    // update 
+    // $users = DB::table('users')->where('id', 6)->update(['email' => 'ksjdhdskj@gmail.com']);
     dd($users);
 });
 
