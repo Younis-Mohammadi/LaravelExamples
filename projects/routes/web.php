@@ -24,6 +24,9 @@ Route::get('/', function () {
 
     // inser 
     // $users = DB::insert('insert into users(name,email,password) values(?,?,?)',['Ahmad','ahmad2@gmail.com','123456789']);
+    // dd($users);
+
+    // $users = DB::update("update users set email='abc@gmail.com' where id=1");
     dd($users);
 });
 
